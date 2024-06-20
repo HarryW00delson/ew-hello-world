@@ -45,7 +45,7 @@ export function onClientRequest(request) {
     // Outputs a message to the X-Akamai-EdgeWorker-onClientRequest-Log header.
     logger.log('Responding with hello world from the path: %s', request.path);
     if (getLatAndLong()) {
-        request.respondWith(200, {}, watching + googleMaps);
+        request.respondWith(200, {}, `${watching} + ${googleMaps}`);
     } else {
         request.respondWith(400, {}, errorMsg);
     }
