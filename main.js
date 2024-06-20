@@ -14,7 +14,7 @@ function getLatAndLong(request) {
             + request.userLocation.latitude + ',' + request.userLocation.longitude + '&hl=en&z=14&amp&output=embed"></iframe><br /><small><a ' +
             'href="https://maps.google.com/maps?q=' + request.userLocation.latitude + ',' + request.userLocation.longitude + '&hl=en&z=14&amp&output=embed" style="color:#0000FF;text-align:left" ' +
             'target="_blank">See map bigger</a></small>';
-        watching = "<h1>WE'RE WATCHING YOU IN `${request.userLocation.city}`</h1><br/>";
+        watching = "<h1>WE'RE WATCHING YOU IN " + request.userLocation.city + "</h1><br/>";
         return true;
     } else {
         return false;
